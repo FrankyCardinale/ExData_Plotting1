@@ -24,8 +24,7 @@ png('plot4.png',width=480,height=480, bg="transparent")
 par(mfrow = c(2, 2))
 
 # plot 1 (NW)
-plot(hpcData$Datetime, hpcData$Global_active_power, type = "l", ylab = "Global Active Power", 
-     xlab = "")
+plot(hpcData$Datetime, hpcData$Global_active_power, type = "l", ylab = "Global Active Power", xlab = "")
 
 # plot 2 (NE)
 plot(hpcData$Datetime, hpcData$Voltage, type = "l", ylab = "Voltage", xlab = "datetime")
