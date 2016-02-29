@@ -19,7 +19,7 @@ hpcData<-read.table(filePath,header = FALSE, sep= ";",na.strings = "?",
 hpcData$Datetime <- strptime(paste(hpcData$Date, hpcData$Time), "%d/%m/%Y %H:%M:%S")
 
 # Make a plot in PNG file
-png('plot4.png',width=480,height=480)
+png('plot4.png',width=480,height=480, bg="transparent")
 
 par(mfrow = c(2, 2))
 
