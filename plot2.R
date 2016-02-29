@@ -1,14 +1,16 @@
-# Download and unzip data file
-if (!file.exists("./data/household_power_consumption.txt")) {
+# Download and unzip data file, if not exists
+filePath <- "./data/household_power_consumption.txt"
+
+if (!file.exists(filePath)) {
   fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-  download.file(fileURL, "./data/power_data.zip", method = "wget")
+  dir.create("./data")
+  download.file(fileURL, "./data/power_data.zip")
   unzip("./data/power_data.zip", overwrite = T, exdir = "./data")
 }
 
+
 # Read the data into a data table 
 # from just the dates 2007-02-01 and 2007-02-02 
-filePath <- "./data/household_power_consumption.txt"
-
 rowtoRead <- grep("^[1,2]/2/2007", readLines(filePath))
 
 hpcData<-read.table(filePath,header = FALSE, sep= ";",na.strings = "?",
