@@ -31,17 +31,12 @@ plot(hpcData$Datetime, hpcData$Global_active_power, type = "l", ylab = "Global A
 plot(hpcData$Datetime, hpcData$Voltage, type = "l", ylab = "Voltage", xlab = "datetime")
 
 # plot 3 (SW)
-plot(hpcData$Datetime, hpcData$Sub_metering_1, type = "l", ylab = "Energy sub metering", 
-     xlab = "", col = "black")
-points(hpcData$Datetime, hpcData$Sub_metering_2, type = "l", xlab = "", ylab = "Sub_metering_2", 
-       col = "red")
-points(hpcData$Datetime, hpcData$Sub_metering_3, type = "l", xlab = "", ylab = "Sub_metering_3", 
-       col = "blue")
-legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", 
-                                                                        "Sub_metering_2", "Sub_metering_3"), bty = "n", )
+plot(hpcData$Datetime, hpcData$Sub_metering_1, type = "l", ylab = "Energy sub metering", xlab = "", col = "black")
+points(hpcData$Datetime, hpcData$Sub_metering_2, type = "l", xlab = "", ylab = "Sub_metering_2", col = "red")
+points(hpcData$Datetime, hpcData$Sub_metering_3, type = "l", xlab = "", ylab = "Sub_metering_3", col = "blue")
+legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
 
 # plot 4 (SE)
-plot(hpcData$Datetime, hpcData$Global_reactive_power, type = "l", xlab = "datetime", 
-     ylab = "Global_reactive_power", ylim = c(0, 0.5))
+plot(hpcData$Datetime, hpcData$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power", ylim = c(0, 0.5))
 
 dev.off()

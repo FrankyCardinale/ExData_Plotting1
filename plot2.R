@@ -20,9 +20,8 @@ hpcData<-read.table(filePath,header = FALSE, sep= ";",na.strings = "?",
 hpcData$Datetime <- strptime(paste(hpcData$Date, hpcData$Time), "%d/%m/%Y %H:%M:%S")
 
 # Make a plot in PNG file
-png('plot2.png',width=480,height=480)
+png('plot2.png',width=480,height=480, bg="transparent")
 
 plot(hpcData$Datetime, hpcData$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
 dev.off()
-
