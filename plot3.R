@@ -21,7 +21,7 @@ hpcData<-read.table(filePath,header = FALSE, sep= ";",na.strings = "?",
 hpcData$Datetime <- strptime(paste(hpcData$Date, hpcData$Time), "%d/%m/%Y %H:%M:%S")
 
 # Make a plot in PNG file
-png('plot3.png',width=480,height=480, bg="transparent")
+png('./figure/plot3.png',width=480,height=480, bg="transparent")
 
 plot(hpcData$Datetime, hpcData$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 points(hpcData$Datetime, hpcData$Sub_metering_2, type = "l", xlab = "", ylab = "Energy sub metering", 

@@ -17,7 +17,7 @@ hpcData<-read.table(filePath,header = FALSE, sep= ";",na.strings = "?",
                     col.names = colnames(read.table(filePath, nrow = 1, header = TRUE, sep= ";")))
 
 # Make a plot in PNG file
-png('plot1.png',width=480,height=480, bg="transparent")
+png('./figure/plot1.png',width=480,height=480, bg="transparent")
 
 hist(hpcData$Global_active_power, main = "Global Active Power", ylab = "Frequency", 
      xlab = "Global Active Power (kilowatts)", col = "red")
